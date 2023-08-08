@@ -16,6 +16,10 @@
                 data: { buttonId: buttonId },
                 success: function(response) {
 				$('#' + buttonId).closest('tr').find('.bashResult').html(response);
+				setTimeout(function cleartext(){
+					console.log("coucou");
+				$('#' + buttonId).closest('tr').find('.bashResult').html("");
+				},5000);
                 },
                 error: function(xhr, status, error) {
                     console.error(error);
